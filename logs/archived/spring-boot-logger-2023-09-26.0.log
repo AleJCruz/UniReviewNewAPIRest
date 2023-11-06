@@ -1,0 +1,41 @@
+2023-09-26 14:43:00,833 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting UniReviewApplication using Java 20.0.2 on DESKTOP-BURFA59 with PID 2936 (C:\Users\user\Desktop\Proyectos\UNIREVIEW\UniReview\target\classes started by user in C:\Users\user\Desktop\Proyectos\UNIREVIEW\UniReview)
+2023-09-26 14:43:00,834 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.15, Spring v5.3.29
+2023-09-26 14:43:00,834 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-09-26 14:43:00,867 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-09-26 14:43:00,867 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-09-26 14:43:01,356 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-26 14:43:01,407 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 46 ms. Found 7 JPA repository interfaces.
+2023-09-26 14:43:01,818 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2023-09-26 14:43:01,823 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2023-09-26 14:43:01,824 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2023-09-26 14:43:01,825 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.79]
+2023-09-26 14:43:01,877 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-09-26 14:43:01,877 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1009 ms
+2023-09-26 14:43:01,992 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-26 14:43:02,026 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-09-26 14:43:02,146 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-09-26 14:43:02,217 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2023-09-26 14:43:02,332 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2023-09-26 14:43:02,345 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-09-26 14:43:02,958 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-26 14:43:02,965 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-26 14:43:03,387 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-26 14:43:03,838 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2023-09-26 14:43:03,855 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2023-09-26 14:43:03,870 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-26 14:43:03,879 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started UniReviewApplication in 3.364 seconds (JVM running for 3.877)
+2023-09-26 14:43:19,576 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-26 14:43:19,576 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-09-26 14:43:19,577 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2023-09-26 14:43:19,698 ERROR com.upc.unireview.controller.UniversityController [http-nio-8080-exec-1] org.springframework.dao.DataIntegrityViolationException: not-null property references a null or transient value : com.upc.unireview.entities.University.name; nested exception is org.hibernate.PropertyValueException: not-null property references a null or transient value : com.upc.unireview.entities.University.name
+2023-09-26 14:43:19,699 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8080-exec-1] Resolved [org.springframework.web.server.ResponseStatusException: 404 NOT_FOUND "No se ha podido registrar"]
+2023-09-26 14:43:25,387 ERROR com.upc.unireview.controller.UserController [http-nio-8080-exec-3] org.springframework.dao.DataIntegrityViolationException: not-null property references a null or transient value : com.upc.unireview.entities.User.name; nested exception is org.hibernate.PropertyValueException: not-null property references a null or transient value : com.upc.unireview.entities.User.name
+2023-09-26 14:43:25,388 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8080-exec-3] Resolved [org.springframework.web.server.ResponseStatusException: 404 NOT_FOUND "No se ha podido registrar"]
+2023-09-26 14:43:35,660 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-5] SQL Error: 0, SQLState: 23505
+2023-09-26 14:43:35,660 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-5] ERROR: llave duplicada viola restricción de unicidad «uk_5171l57faosmj8myawaucatdw»
+  Detail: Ya existe la llave (email)=(email12@gmail.c0om).
+2023-09-26 14:43:35,662 ERROR com.upc.unireview.controller.UserController [http-nio-8080-exec-5] org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+2023-09-26 14:43:35,662 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8080-exec-5] Resolved [org.springframework.web.server.ResponseStatusException: 404 NOT_FOUND "No se ha podido registrar"]
+2023-09-26 14:43:40,036 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-26 14:43:40,038 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-09-26 14:43:40,041 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
