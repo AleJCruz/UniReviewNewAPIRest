@@ -151,4 +151,10 @@ public class UniversityServiceImpl implements UniversityService{
     public String getEnrollmentLink(Long id){
         return universityRepository.findById(id).get().getEnrollmentLink();
     }
+
+    public University findByID(Long ID){
+        University u = universityRepository.getUniversityById(ID);
+        setUniversityQualification(u);
+        return u;
+    }
 }

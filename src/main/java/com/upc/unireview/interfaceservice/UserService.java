@@ -8,4 +8,5 @@ public interface UserService {
     public User deleteUser(Long id) throws Exception;
     public List<User> listUser();
     public User getUser(String username);
+    public User getUserbyID(Long ID);
 }

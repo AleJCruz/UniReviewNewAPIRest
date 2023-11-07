@@ -19,4 +19,5 @@ public interface UserRepository extends JpaRepository<User,Long> {
     @Modifying
     @Query(value = "INSERT INTO users_roles (user_id, role_id ) VALUES (:user_id, :rol_id)", nativeQuery = true)
     public Integer insertUserRol(@Param("user_id") Long user_id, @Param("rol_id") Long rol_id);
+    public User getUserById(Long id);
 }

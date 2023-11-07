@@ -82,6 +82,7 @@ public class DataInitializer implements CommandLineRunner {
             updateTeacher(e);
         }
 
+
     }
     private byte[] readImageDataFromClasspath(String classpathResource) throws IOException {
         InputStream in = new ClassPathResource(classpathResource).getInputStream();
