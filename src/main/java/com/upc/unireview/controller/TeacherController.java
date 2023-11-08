@@ -32,7 +32,7 @@ public class TeacherController {
     @Autowired
     private ImageService imageService;
     @PostMapping("/teacher")
-    public ResponseEntity<TeacherDTO> register(@RequestBody TeacherDTO teacherDTO){
+    public <Mono>ResponseEntity<TeacherDTO> register(@RequestBody TeacherDTO teacherDTO){
         Teacher teacher;
         TeacherDTO dto;
         try{
@@ -51,7 +51,7 @@ public class TeacherController {
         return new ResponseEntity<TeacherDTO>(dto, HttpStatus.OK);
     }
     @GetMapping("/teacher")
-    public ResponseEntity<List<TeacherDTO>> list(){
+    public <Flux>ResponseEntity<List<TeacherDTO>> list(){
         List<Teacher> list;
         List<TeacherDTO> listDTO=null;
         try {
@@ -66,7 +66,7 @@ public class TeacherController {
     }
 
     @GetMapping("/teacher/{id}")
-    public ResponseEntity<TeacherDTO> getById(@PathVariable(value="id") Long id){
+    public <Mono>ResponseEntity<TeacherDTO> getById(@PathVariable(value="id") Long id){
         Teacher teacher;
         TeacherDTO dto;
         try{
@@ -81,7 +81,7 @@ public class TeacherController {
     }
 
     @PutMapping("/teacher")
-    public ResponseEntity<TeacherDTO> updateTeacher(@RequestBody TeacherDTO teacherDTO){
+    public <Mono>ResponseEntity<TeacherDTO> updateTeacher(@RequestBody TeacherDTO teacherDTO){
         Teacher teacher;
         TeacherDTO dto;
         try{
@@ -96,7 +96,7 @@ public class TeacherController {
         return new ResponseEntity<TeacherDTO>(dto,HttpStatus.OK);
     }
     @DeleteMapping("/teacher/{id}")
-    public ResponseEntity<TeacherDTO> delete(@PathVariable(value="id") Long id){
+    public <Mono>ResponseEntity<TeacherDTO> delete(@PathVariable(value="id") Long id){
         Teacher teacher;
         TeacherDTO dto;
         try {
@@ -111,7 +111,7 @@ public class TeacherController {
     }
 
     @PutMapping("/teacher/{teacherId}/courses/{courseId}")
-    public ResponseEntity<TeacherDTO> addCourse(@PathVariable(value="teacherId") Long teacherId, @PathVariable(value="courseId") Long courseId)throws Exception{
+    public <Mono>ResponseEntity<TeacherDTO> addCourse(@PathVariable(value="teacherId") Long teacherId, @PathVariable(value="courseId") Long courseId)throws Exception{
         Teacher teacher;
         TeacherDTO dto;
         try {
@@ -124,7 +124,7 @@ public class TeacherController {
         return new ResponseEntity<TeacherDTO>(dto, HttpStatus.OK);
     }
     @GetMapping("/teacher/findbyfullname/{fullname}")
-    public ResponseEntity<List<TeacherDTO>> listByFullname(@PathVariable (value = "fullname")String fullname){
+    public <Flux>ResponseEntity<List<TeacherDTO>> listByFullname(@PathVariable (value = "fullname")String fullname){
         List<Teacher> list;
         List<TeacherDTO> listDTO=null;
         try {
@@ -140,7 +140,7 @@ public class TeacherController {
 
     //Implementar filtro de rigurosidad
     @GetMapping("/teacher/rigurosity/{rigurosityName}")
-    public ResponseEntity<List<TeacherDTO>> listTeachersByRigurosity(@PathVariable(value="rigurosityName") String rigurosityName){
+    public <Flux>ResponseEntity<List<TeacherDTO>> listTeachersByRigurosity(@PathVariable(value="rigurosityName") String rigurosityName){
         List<Teacher> list;
         List<TeacherDTO> listDTO=null;
         try {
@@ -155,7 +155,7 @@ public class TeacherController {
     }
 
     @GetMapping("/teacher/advancedsearch/{qualificationFrom}/{qualificationTo}/{rigurosityId}/{courseId}/{fullNameTeacher}")
-    public ResponseEntity<List<TeacherDTO>> listTeachersByFilters(@PathVariable(value="qualificationFrom") double qualificationFrom,
+    public <Flux>ResponseEntity<List<TeacherDTO>> listTeachersByFilters(@PathVariable(value="qualificationFrom") double qualificationFrom,
                                                                   @PathVariable(value="qualificationTo") double qualificationTo,
                                                                   @PathVariable(value="rigurosityId") Long rigurosityId,
                                                                   @PathVariable(value="courseId") Long courseId,
@@ -175,7 +175,7 @@ public class TeacherController {
 
     //Implementar filtro por curso para profesor
     @GetMapping("/teacher/course/{courseId}")
-    public ResponseEntity<List<TeacherDTO>> listTeachersByCourseFilter(@PathVariable(value="courseId") Long courseId){
+    public <Flux>ResponseEntity<List<TeacherDTO>> listTeachersByCourseFilter(@PathVariable(value="courseId") Long courseId){
         List<Teacher> list;
         List<TeacherDTO> listDTO=null;
         try {
@@ -192,7 +192,7 @@ public class TeacherController {
 
     //Implementar filtro por calificacion para profesor
     @GetMapping("/teacher/qualification/{qualificationFrom}/{qualificationTo}")
-    public ResponseEntity<List<TeacherDTO>> listTeachersByQualificationFilter(@PathVariable(value="qualificationFrom") double qualificationFrom,
+    public <Flux>ResponseEntity<List<TeacherDTO>> listTeachersByQualificationFilter(@PathVariable(value="qualificationFrom") double qualificationFrom,
                                                                               @PathVariable(value="qualificationTo") double qualificationTo){
         List<Teacher> list;
         List<TeacherDTO> listDTO=null;

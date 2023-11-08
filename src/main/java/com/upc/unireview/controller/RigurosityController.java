@@ -26,7 +26,7 @@ public class RigurosityController {
     private RigurosityService rigurosityService;
     Logger logger = LoggerFactory.getLogger(RigurosityController.class);
     @PostMapping("/rigurosity")
-    public ResponseEntity<RigurosityDTO> registerRigurosity(@RequestBody RigurosityDTO rigurosityDTO){
+    public <Mono>ResponseEntity<RigurosityDTO> registerRigurosity(@RequestBody RigurosityDTO rigurosityDTO){
         Rigurosity rigurosity;
         RigurosityDTO dto;
         try{
@@ -42,7 +42,7 @@ public class RigurosityController {
         return new ResponseEntity<RigurosityDTO>(dto, HttpStatus.OK);
     }
     @GetMapping("/rigurosity")
-    public ResponseEntity<List<RigurosityDTO>> listAllRigurosities(){
+    public <Flux>ResponseEntity<List<RigurosityDTO>> listAllRigurosities(){
         List<Rigurosity> list;
         List<RigurosityDTO> listDTO=null;
         try {
@@ -56,7 +56,7 @@ public class RigurosityController {
         return new ResponseEntity<>(listDTO,HttpStatus.OK);
     }
     @PutMapping("/rigurosity")
-    public ResponseEntity<RigurosityDTO> updateRigurosity(@RequestBody RigurosityDTO rigurosityDTO){
+    public <Mono>ResponseEntity<RigurosityDTO> updateRigurosity(@RequestBody RigurosityDTO rigurosityDTO){
         Rigurosity rigurosity;
         RigurosityDTO dto;
         try{
@@ -71,7 +71,7 @@ public class RigurosityController {
         return new ResponseEntity<RigurosityDTO>(dto,HttpStatus.OK);
     }
     @DeleteMapping("/rigurosity/{id}")
-    public ResponseEntity<RigurosityDTO> delete(@PathVariable(value="id") Long id){
+    public <Mono>ResponseEntity<RigurosityDTO> delete(@PathVariable(value="id") Long id){
         Rigurosity rigurosity;
         RigurosityDTO dto;
         try {

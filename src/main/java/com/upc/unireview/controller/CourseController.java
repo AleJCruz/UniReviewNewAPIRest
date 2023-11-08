@@ -20,7 +20,7 @@ public class CourseController {
     private CourseService courseService;
     Logger logger = LoggerFactory.getLogger(CourseController.class);
     @PostMapping("/course")
-    public ResponseEntity<CourseDTO> register(@RequestBody CourseDTO courseDTO){
+    public <Mono>ResponseEntity<CourseDTO> register(@RequestBody CourseDTO courseDTO){
         Course course;
         CourseDTO dto;
         try{
@@ -36,7 +36,7 @@ public class CourseController {
         return new ResponseEntity<CourseDTO>(dto, HttpStatus.OK);
     }
     @GetMapping("/courses")
-    public ResponseEntity<List<CourseDTO>> list(){
+    public <Flux>ResponseEntity<List<CourseDTO>> list(){
         List<Course> list;
         List<CourseDTO> listDTO=null;
         try {
@@ -51,7 +51,7 @@ public class CourseController {
     }
 
     @PutMapping("/course")
-    public ResponseEntity<CourseDTO> updateCourse(@RequestBody CourseDTO courseDTO){
+    public <Mono>ResponseEntity<CourseDTO> updateCourse(@RequestBody CourseDTO courseDTO){
         Course course;
         CourseDTO dto;
         try{
@@ -67,7 +67,7 @@ public class CourseController {
     }
 
     @DeleteMapping("/course/{id}")
-    public ResponseEntity<CourseDTO> delete(@PathVariable(value="id") Long id){
+    public <Mono>ResponseEntity<CourseDTO> delete(@PathVariable(value="id") Long id){
         Course course;
         CourseDTO dto;
         try {

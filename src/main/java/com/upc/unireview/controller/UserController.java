@@ -46,7 +46,7 @@ public class UserController {
     Logger logger = LoggerFactory.getLogger(UserController.class);
 
     @PostMapping("/user/register")
-    public ResponseEntity<UserDTO> register(@RequestBody UserDTO userDTO){
+    public <Mono>ResponseEntity<UserDTO> register(@RequestBody UserDTO userDTO){
         User user;
         UserDTO dto;
         try{
@@ -70,7 +70,7 @@ public class UserController {
         return new ResponseEntity<UserDTO>(dto, HttpStatus.OK);
     }
     @GetMapping("/user")
-    public ResponseEntity<List<UserDTO>> list(){
+    public <Flux>ResponseEntity<List<UserDTO>> list(){
         List<User> list;
         List<UserDTO> listDTO=null;
         try {
@@ -84,7 +84,7 @@ public class UserController {
         return new ResponseEntity<>(listDTO,HttpStatus.OK);
     }
     @GetMapping("/user/me")
-    public ResponseEntity<UserDTO> getAuthenticatedUser(HttpServletRequest request) {
+    public <Mono>ResponseEntity<UserDTO> getAuthenticatedUser(HttpServletRequest request) {
         // Extrae el token del encabezado de la solicitud.
         String tokenHeader = request.getHeader("Authorization");
         String username = null;
@@ -116,7 +116,7 @@ public class UserController {
         return ResponseEntity.ok(userDto);
     }
     @PutMapping("/user")
-    public ResponseEntity<UserDTO> updateUser(@RequestBody UserDTO userDTO){
+    public <Mono>ResponseEntity<UserDTO> updateUser(@RequestBody UserDTO userDTO){
         User user;
         UserDTO dto;
         try{
@@ -133,7 +133,7 @@ public class UserController {
 
     //editar por id de usuario la imagen
     @PutMapping("/user/{id}")
-    public ResponseEntity<ImageDTO> updateUserImage(@PathVariable(value="id") Long id,@RequestBody ImageDTO imageDTO){
+    public <Mono>ResponseEntity<ImageDTO> updateUserImage(@PathVariable(value="id") Long id,@RequestBody ImageDTO imageDTO){
         Image image;
         ImageDTO dto;
         try{
@@ -149,7 +149,7 @@ public class UserController {
     }
 
     @DeleteMapping("/user/{id}")
-    public ResponseEntity<UserDTO> delete(@PathVariable(value="id") Long id){
+    public <Mono>ResponseEntity<UserDTO> delete(@PathVariable(value="id") Long id){
         User user;
         UserDTO dto;
         try {

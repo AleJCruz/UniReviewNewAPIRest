@@ -28,7 +28,7 @@ public class UniversityController {
     private ImageService imageService;
     Logger logger = LoggerFactory.getLogger(UniversityController.class);
     @PostMapping("/university")
-    public ResponseEntity<UniversityDTO> register(@RequestBody UniversityDTO universityDTO){
+    public <Mono>ResponseEntity<UniversityDTO> register(@RequestBody UniversityDTO universityDTO){
         University university;
         UniversityDTO dto;
         try {
@@ -44,7 +44,7 @@ public class UniversityController {
     }
 
     @GetMapping("/universities")
-    public ResponseEntity<List<UniversityDTO>> list(){
+    public <Flux>ResponseEntity<List<UniversityDTO>> list(){
         List<University> list;
         List<UniversityDTO> listDTO=null;
         try {
@@ -59,7 +59,7 @@ public class UniversityController {
     }
 
     @PutMapping("/university")
-    public ResponseEntity<UniversityDTO> updateUser(@RequestBody UniversityDTO universityDTO){
+    public <Mono>ResponseEntity<UniversityDTO> updateUser(@RequestBody UniversityDTO universityDTO){
         University university;
         UniversityDTO dto;
         try{
@@ -75,7 +75,7 @@ public class UniversityController {
     }
 
     @DeleteMapping("/university/{id}")
-    public ResponseEntity<UniversityDTO> delete(@PathVariable(value="id") Long id){
+    public <Mono>ResponseEntity<UniversityDTO> delete(@PathVariable(value="id") Long id){
         University university;
         UniversityDTO dto;
         try {
@@ -90,7 +90,7 @@ public class UniversityController {
     }
 
     @GetMapping("/universities/findby/{name}")
-    public ResponseEntity<List<UniversityDTO>> listByName(@PathVariable (value = "name")String name){
+    public <Flux>ResponseEntity<List<UniversityDTO>> listByName(@PathVariable (value = "name")String name){
         List<University> list;
         List<UniversityDTO> listDTO=null;
         try {
@@ -105,7 +105,7 @@ public class UniversityController {
     }
     //TODO: Implementar filtros
     @GetMapping("/universities/findbyfilters/{district}/{modality}/{qualificationFrom}/{qualificationTo}/{pensionFrom}/{pensionTo}")
-    public ResponseEntity<List<UniversityDTO>> listByFiltersAdvanced(@PathVariable(value = "district") String district,
+    public <Flux>ResponseEntity<List<UniversityDTO>> listByFiltersAdvanced(@PathVariable(value = "district") String district,
                                                                       @PathVariable(value = "modality") String modality,
                                                                       @PathVariable(value = "qualificationFrom") double qualificationFrom,
                                                                       @PathVariable(value = "qualificationTo") double qualificationTo,
@@ -126,7 +126,7 @@ public class UniversityController {
 
     //Implementar filtro de tipo de educacion
     @GetMapping("/universities/findbyeducationtype/{educationType}")
-    public ResponseEntity<List<UniversityDTO>> listByEducationType(@PathVariable(value = "educationType") String educationType)
+    public <Flux>ResponseEntity<List<UniversityDTO>> listByEducationType(@PathVariable(value = "educationType") String educationType)
     {
         List<University> list;
         List<UniversityDTO> listDTO=null;
@@ -143,7 +143,7 @@ public class UniversityController {
 
     //universidad por id
     @GetMapping("/university/{id}")
-    public ResponseEntity<UniversityDTO> getById(@PathVariable(value="id") Long id){
+    public <Mono>ResponseEntity<UniversityDTO> getById(@PathVariable(value="id") Long id){
         University university;
         UniversityDTO dto;
         try{
@@ -159,7 +159,7 @@ public class UniversityController {
 
     //Implementar filtro de pensión promedio
     @GetMapping("/universities/findbypension/{pensionFrom}/{pensionTo}")
-    public ResponseEntity<List<UniversityDTO>> listByPension(@PathVariable(value = "pensionFrom") double pensionFrom,
+    public <Flux>ResponseEntity<List<UniversityDTO>> listByPension(@PathVariable(value = "pensionFrom") double pensionFrom,
                                                              @PathVariable(value = "pensionTo") double pensionTo)
     {
         List<University> list;
@@ -177,7 +177,7 @@ public class UniversityController {
 
     //Implementar filtro de link de matricula
     @GetMapping("/universities/findlinkbyid/{id}")
-    public ResponseEntity<String> listLinkById(@PathVariable(value = "id") Long id)
+    public <Mono>ResponseEntity<String> listLinkById(@PathVariable(value = "id") Long id)
     {
         String link;
         try {

@@ -21,7 +21,7 @@ public class ImageController {
     ImageService imageService;
 
     @PostMapping("/image/upload")
-    public ResponseEntity<String> uploadImage(@RequestParam("file") MultipartFile file) {
+    public <Mono>ResponseEntity<String> uploadImage(@RequestParam("file") MultipartFile file) {
         try {
             if (file != null) {
                 Image image = new Image();
@@ -38,12 +38,12 @@ public class ImageController {
     }
 
     @GetMapping("/image/list")
-    public ResponseEntity<List<ImageDTO>> getAllImages() {
+    public <Flux>ResponseEntity<List<ImageDTO>> getAllImages() {
         return new ResponseEntity<>(convertToListDTO(imageService.listImage()), HttpStatus.OK);
     }
 
     @DeleteMapping("/image/{id}")
-    public ResponseEntity<Void> deleteImage(@PathVariable Long id) {
+    public <Mono>ResponseEntity<Void> deleteImage(@PathVariable Long id) {
         imageService.deleteImage(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }

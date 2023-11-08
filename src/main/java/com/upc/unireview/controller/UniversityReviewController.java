@@ -24,7 +24,7 @@ public class UniversityReviewController {
     private UniversityReviewService universityReviewService;
     Logger logger = LoggerFactory.getLogger(UniversityReviewController.class);
     @PostMapping("/universityReview")
-    public ResponseEntity<UniversityReviewDTO> register(@RequestBody UniversityReviewDTO universityReviewDTO){
+    public <Mono>ResponseEntity<UniversityReviewDTO> register(@RequestBody UniversityReviewDTO universityReviewDTO){
         UniversityReview universityReview;
         UniversityReviewDTO dto;
         try {
@@ -40,7 +40,7 @@ public class UniversityReviewController {
     }
 
     @GetMapping("/universityReview/byname/{prefix}")
-    public ResponseEntity<List<UniversityReviewDTO>> list(@PathVariable(value="prefix") String prefix){
+    public <Flux>ResponseEntity<List<UniversityReviewDTO>> list(@PathVariable(value="prefix") String prefix){
         List<UniversityReview> list;
         List<UniversityReviewDTO> listDTO=null;
         try {
@@ -54,7 +54,7 @@ public class UniversityReviewController {
         return new ResponseEntity<>(listDTO,HttpStatus.OK);
     }
     @GetMapping("/universityReview/")
-    public ResponseEntity<List<UniversityReviewDTO>> listByUniversityName(){
+    public <Flux>ResponseEntity<List<UniversityReviewDTO>> listByUniversityName(){
         List<UniversityReview> list;
         List<UniversityReviewDTO> listDTO=null;
         try {
@@ -69,7 +69,7 @@ public class UniversityReviewController {
     }
 
     @PutMapping("/universityReview")
-    public ResponseEntity<UniversityReviewDTO> updateUser(@RequestBody UniversityReviewDTO universityReviewDTO){
+    public <Mono>ResponseEntity<UniversityReviewDTO> updateUser(@RequestBody UniversityReviewDTO universityReviewDTO){
         UniversityReview universityReview;
         UniversityReviewDTO dto;
         try{
@@ -85,7 +85,7 @@ public class UniversityReviewController {
     }
 
     @DeleteMapping("/universityReview/{id}")
-    public ResponseEntity<UniversityReviewDTO> delete(@PathVariable(value="id") Long id){
+    public <Mono>ResponseEntity<UniversityReviewDTO> delete(@PathVariable(value="id") Long id){
         UniversityReview universityReview;
         UniversityReviewDTO dto;
         try {
@@ -100,7 +100,7 @@ public class UniversityReviewController {
     }
     //Listar todas las reseñas pertenecientes a una universidad al pasarle por parámetro de búsqueda el Id de una universidad
     @GetMapping("/universityReview/byidUniversity/{id}")
-    public ResponseEntity<List<UniversityReviewDTO>> listUniversityReviewsByIdOfUniversity(@PathVariable(value="id") Long id){
+    public <Flux>ResponseEntity<List<UniversityReviewDTO>> listUniversityReviewsByIdOfUniversity(@PathVariable(value="id") Long id){
         List<UniversityReview> list;
         List<UniversityReviewDTO> listDTO=null;
         try {

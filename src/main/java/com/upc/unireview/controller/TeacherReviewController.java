@@ -25,7 +25,7 @@ public class TeacherReviewController {
     private TeacherReviewService teacherReviewService;
     Logger logger = LoggerFactory.getLogger(TeacherReviewController.class);
     @PostMapping("/teacherReview")
-    public ResponseEntity<TeacherReviewDTO> register(@RequestBody TeacherReviewDTO teacherReviewDTO){
+    public <Mono>ResponseEntity<TeacherReviewDTO> register(@RequestBody TeacherReviewDTO teacherReviewDTO){
         TeacherReview teacherReview;
         TeacherReviewDTO dto;
         try{
@@ -41,7 +41,7 @@ public class TeacherReviewController {
         return new ResponseEntity<TeacherReviewDTO>(dto, HttpStatus.OK);
     }
     @GetMapping("/teacherReviews")
-    public ResponseEntity<List<TeacherReviewDTO>> list(){
+    public <Flux>ResponseEntity<List<TeacherReviewDTO>> list(){
         List<TeacherReview> list;
         List<TeacherReviewDTO> listDTO=null;
         try {
@@ -55,7 +55,7 @@ public class TeacherReviewController {
         return new ResponseEntity<>(listDTO,HttpStatus.OK);
     }
     @PutMapping("/teacherReview")
-    public ResponseEntity<TeacherReviewDTO> updateTeacherReview(@RequestBody TeacherReviewDTO teacherDTO){
+    public <Mono>ResponseEntity<TeacherReviewDTO> updateTeacherReview(@RequestBody TeacherReviewDTO teacherDTO){
         TeacherReview teacherReview;
         TeacherReviewDTO dto;
         try{
@@ -70,7 +70,7 @@ public class TeacherReviewController {
         return new ResponseEntity<TeacherReviewDTO>(dto,HttpStatus.OK);
     }
     @GetMapping("/teacherReviews/byid/{id}")
-    public ResponseEntity<List<TeacherReviewDTO>> listByTeacherId(@PathVariable(value="id") Long id){
+    public <Flux>ResponseEntity<List<TeacherReviewDTO>> listByTeacherId(@PathVariable(value="id") Long id){
         List<TeacherReview> list;
         List<TeacherReviewDTO> listDTO=null;
         try {
@@ -85,7 +85,7 @@ public class TeacherReviewController {
     }
 
     @DeleteMapping("/teacherReview/{id}")
-    public ResponseEntity<TeacherReviewDTO> delete(@PathVariable(value="id") Long id){
+    public <Mono>ResponseEntity<TeacherReviewDTO> delete(@PathVariable(value="id") Long id){
         TeacherReview teacherReview;
         TeacherReviewDTO dto;
         try {
@@ -100,7 +100,7 @@ public class TeacherReviewController {
     }
 
     @GetMapping("/teacherReviews/byname/{prefix}")
-    public ResponseEntity<List<TeacherReviewDTO>> listByNameTeacher(@PathVariable(value="prefix") String prefix){
+    public <Flux>ResponseEntity<List<TeacherReviewDTO>> listByNameTeacher(@PathVariable(value="prefix") String prefix){
         List<TeacherReview> list;
         List<TeacherReviewDTO> listDTO=null;
         try {
