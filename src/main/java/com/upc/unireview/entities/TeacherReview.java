@@ -18,7 +18,7 @@ public class TeacherReview {
     private Long id;
     @Column(nullable = false)
     private LocalDate reviewdate;
-    @Column(length = 500,nullable = false)
+    @Column(length = 3000,nullable = false)
     private String description;
     @Column
     private int score;

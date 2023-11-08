@@ -1,6 +1,7 @@
 package com.upc.unireview.service;
 
 
+import com.upc.unireview.entities.Course;
 import com.upc.unireview.entities.Image;
 import com.upc.unireview.interfaceservice.ImageService;
 import com.upc.unireview.repository.ImageRepository;
@@ -26,5 +27,10 @@ public class ImageServiceImpl implements ImageService {
             imageRepository.delete(image);
         }
         return image;
+    }
+    public Image updateImage(Image image)throws Exception{
+        imageRepository.findById(image.getId()).
+                orElseThrow(()->new Exception("No se encontró la entidad"));
+        return imageRepository.save(image);
     }
 }

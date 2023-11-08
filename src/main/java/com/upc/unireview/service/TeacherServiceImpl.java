@@ -231,6 +231,8 @@ public class TeacherServiceImpl implements TeacherService {
     }
 
     public Teacher getTeacherByID(Long ID){
-        return teacherRepository.getTeacherById(ID);
+        Teacher teacher = teacherRepository.getTeacherById(ID);
+        CalcQualification(teacher);
+        return teacher;
     }
 }

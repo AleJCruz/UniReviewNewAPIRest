@@ -16,6 +16,8 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.util.StreamUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
@@ -129,6 +131,23 @@ public class UserController {
         return new ResponseEntity<UserDTO>(dto,HttpStatus.OK);
     }
 
+    //editar por id de usuario la imagen
+    @PutMapping("/user/{id}")
+    public ResponseEntity<ImageDTO> updateUserImage(@PathVariable(value="id") Long id,@RequestBody ImageDTO imageDTO){
+        Image image;
+        ImageDTO dto;
+        try{
+            image = convertImageToEntity(imageDTO);
+            image = imageService.updateImage(image);
+            dto = convertImageToDTO(image);
+        }
+        catch (Exception e){
+            logger.error(e.toString());
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "No se puede Actualizar");
+        }
+        return new ResponseEntity<ImageDTO>(dto,HttpStatus.OK);
+    }
+
     @DeleteMapping("/user/{id}")
     public ResponseEntity<UserDTO> delete(@PathVariable(value="id") Long id){
         User user;
@@ -161,6 +180,17 @@ public class UserController {
 
         return userDTO;
     }
+    public Image convertImageToEntity(ImageDTO imageDTO){
+        ModelMapper modelMapper = new ModelMapper();
+        Image image = modelMapper.map(imageDTO,Image.class);
+        return image;
+    }
+    public ImageDTO convertImageToDTO(Image image){
+        ModelMapper modelMapper = new ModelMapper();
+        ImageDTO imageDTO = modelMapper.map(image,ImageDTO.class);
+        return imageDTO;
+    }
+
 
     private List<UserDTO> convertToListDTO(List<User> list){
         return list.stream().map(this::convertToDTO).collect(Collectors.toList());
@@ -169,4 +199,5 @@ public class UserController {
         InputStream in = new ClassPathResource(classpathResource).getInputStream();
         return StreamUtils.copyToByteArray(in);
     }
+
 }

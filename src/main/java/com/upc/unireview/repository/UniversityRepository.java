@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface UniversityRepository extends JpaRepository<University, Long> {
     public List<University> findAllByNameStartingWith(String prefix);
-    //listar todas las universidades por campus
-
+    //listar todas las universidades por campu
+    public University getUniversityById(Long id);
 
 }

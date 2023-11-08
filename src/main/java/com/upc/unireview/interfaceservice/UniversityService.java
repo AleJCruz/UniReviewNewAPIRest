@@ -17,4 +17,5 @@ public interface UniversityService {
     public List<University> listUniversitiesByEducationType(String educationType);
     public List<University> listUniversitiesByPension(double pensionFrom, double pensionTo);
     public String getEnrollmentLink(Long id);
+    public University findByID(Long ID);
 }

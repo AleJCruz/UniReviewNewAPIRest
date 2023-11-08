@@ -20,7 +20,7 @@ public class UniversityReview {
     private LocalDate reviewdate;
     @Column(length = 500,nullable = false)
     private String relatedCareer;
-    @Column(length = 500,nullable = false)
+    @Column(length = 3000,nullable = false)
     private String description;
     @Column
     private int score;

@@ -141,6 +141,22 @@ public class UniversityController {
         return new ResponseEntity<>(listDTO,HttpStatus.OK);
     }
 
+    //universidad por id
+    @GetMapping("/university/{id}")
+    public ResponseEntity<UniversityDTO> getById(@PathVariable(value="id") Long id){
+        University university;
+        UniversityDTO dto;
+        try{
+            university = universityService.findByID(id);
+            dto = convertToDTO(university);
+        }
+        catch (Exception e){
+            logger.error(e.toString());
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "No existe profesor con ese ID");
+        }
+        return new ResponseEntity<UniversityDTO>(dto,HttpStatus.OK);
+    }
+
     //Implementar filtro de pensión promedio
     @GetMapping("/universities/findbypension/{pensionFrom}/{pensionTo}")
     public ResponseEntity<List<UniversityDTO>> listByPension(@PathVariable(value = "pensionFrom") double pensionFrom,

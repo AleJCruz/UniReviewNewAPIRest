@@ -10,6 +10,6 @@ public interface ImageService {
 
     public Image uploadImage(Image image);
     public List<Image> listImage();
-
+    public Image updateImage(Image image)throws Exception;
     public Image deleteImage(Long id);
 }
