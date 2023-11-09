@@ -81,7 +81,7 @@ public class TeacherServiceImpl implements TeacherService {
     public List<Teacher> listTeachersByFilters(double qualificationFrom, double qualificationTo, Long rigurosityId, Long courseId, String fullNameTeacher){
         //prefix para el nombre, las coincidencias
         List<Teacher> l1=new ArrayList<>();
-        if(!fullNameTeacher.isEmpty() || fullNameTeacher != null){
+        if(!fullNameTeacher.isEmpty() && !fullNameTeacher.equals("&todos&")){
             l1=teacherRepository.findTeacherByFullnameStartingWith(fullNameTeacher);
         }
         else{
@@ -97,7 +97,7 @@ public class TeacherServiceImpl implements TeacherService {
             }
         }
         //en front siempre debe escogerse una rigurosidad
-        if(rigurosityId != null){
+        if(rigurosityId != 0){
             for (Teacher teacher:listTeacher()
             ) {
                 if(teacher.getRigurosity().getId() != rigurosityId){
@@ -105,7 +105,7 @@ public class TeacherServiceImpl implements TeacherService {
                 }
             }
         }
-        if(courseId != null){
+        if(courseId != 0){
             for (Teacher teacher:listTeacher()
             ) {
                 boolean flag = false;

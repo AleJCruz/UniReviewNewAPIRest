@@ -62,7 +62,7 @@ public class UniversityServiceImpl implements UniversityService{
 
     public List<University> listUniversitiesByFilters(String district, String modality, double qualificationFrom, double qualificationTo, double pensionFrom, double pensionTo){
         List<University> list= listUniversities();
-        if(!district.isEmpty() && district != null){
+        if(!district.isEmpty() && district != null && !district.equals("Todos los distritos")){
             for (University university:listUniversities()
                  ) {
                 if(!university.getCampus().equals(district)){
@@ -70,7 +70,7 @@ public class UniversityServiceImpl implements UniversityService{
                 }
             }
         }
-        if(!modality.isEmpty() && modality != null){
+        if(!modality.isEmpty() && modality != null && !modality.equals("Todas las modalidades")){
             for (University university:listUniversities()
             ) {
                 switch (modality){
@@ -92,8 +92,15 @@ public class UniversityServiceImpl implements UniversityService{
                 }
             }
         }
-
-        if((pensionFrom<pensionTo) && pensionFrom >= 0){
+        if((qualificationFrom<qualificationTo) && qualificationFrom >= 1 && qualificationTo <= 5){
+            for (University university:listUniversities()
+            ) {
+                if(university.getQualification()<qualificationFrom || university.getQualification()>qualificationTo){
+                    list.remove(university);
+                }
+            }
+        }
+        if((pensionFrom<pensionTo) && pensionFrom > 0){
             for (University university:listUniversities()
             ) {
                 if(university.getPension()<pensionFrom || university.getPension()>pensionTo){

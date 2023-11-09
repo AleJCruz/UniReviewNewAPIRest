@@ -60,10 +60,21 @@ public class DataInitializer implements CommandLineRunner {
             userRepository.save(new User(1L,"Pepe pipi", "mazinyer127@gmail.com", "wa123", bcryptPassword, "Rimac", 20, true, roles,image));
         }
         if (universityRepository.findAll().isEmpty()){
-            Image image = new Image(null, "university", readImageDataFromClasspath("/images/upc-mo.jpg"));
+            Image image = new Image(null, "university", readImageDataFromClasspath("/images/pucp.jpg"));
             imageRepository.save(image);
-            universityRepository.save(new com.upc.unireview.entities.University(null, "Universidad Peruana de Ciencias Aplicadas", "San Miguel", 2450,true,true,true,0,"https://www.upc.edu.pe/",image));
-
+            universityRepository.save(new com.upc.unireview.entities.University(null, "Pontificia Universidad Católica del Perú", "San Miguel", 1945,true,false,true,0,"https://www.upc.edu.pe/",image));
+            Image image2 = new Image(null, "university", readImageDataFromClasspath("/images/upc-mo.jpg"));
+            imageRepository.save(image2);
+            universityRepository.save(new com.upc.unireview.entities.University(null, "Universidad Peruana de Ciencias Aplicadas", "San Borja", 2450,true,true,true,0,"https://www.upc.edu.pe/",image2));
+            Image image3 = new Image(null, "university", readImageDataFromClasspath("/images/upc-si.jpg"));
+            imageRepository.save(image3);
+            universityRepository.save(new com.upc.unireview.entities.University(null, "Universidad Peruana de Ciencias Aplicadas", "San Isidro", 2450,true,true,false,0,"https://www.upc.edu.pe/",image3));
+            Image image4 = new Image(null, "university", readImageDataFromClasspath("/images/upc-vi.jpg"));
+            imageRepository.save(image4);
+            universityRepository.save(new com.upc.unireview.entities.University(null, "Universidad Peruana de Ciencias Aplicadas", "Chorrillos", 2450,true,true,true,0,"https://www.upc.edu.pe/",image4));
+            Image image5 = new Image(null, "university", readImageDataFromClasspath("/images/upc-sm.jpg"));
+            imageRepository.save(image5);
+            universityRepository.save(new com.upc.unireview.entities.University(null, "Universidad Peruana de Ciencias Aplicadas", "San Miguel", 2450,true,true,true,0,"https://www.upc.edu.pe/",image5));
         }
         if (teacherRepository.findAll().isEmpty()) {
             Image image = new Image(null, "teacher", readImageDataFromClasspath("/images/teacher2.jpg"));

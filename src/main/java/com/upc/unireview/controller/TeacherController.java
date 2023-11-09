@@ -182,6 +182,7 @@ public class TeacherController {
                                                                   @PathVariable(value="fullNameTeacher") String fullNameTeacher){
         List<Teacher> list;
         List<TeacherDTO> listDTO=null;
+        System.out.println("Id de la iamgen:" + qualificationFrom + qualificationTo + fullNameTeacher +rigurosityId + courseId);
         try {
             list = teacherService.listTeachersByFilters(qualificationFrom,qualificationTo,rigurosityId,courseId,fullNameTeacher);
             listDTO = convertToListDTO(list);
