@@ -12,4 +12,5 @@ public interface ImageService {
     public List<Image> listImage();
     public Image updateImage(Image image)throws Exception;
     public Image deleteImage(Long id);
+    public Image getImage(Long id);
 }

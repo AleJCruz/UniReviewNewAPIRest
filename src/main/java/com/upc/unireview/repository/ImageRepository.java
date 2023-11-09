@@ -6,5 +6,5 @@ import javax.transaction.Transactional;
 
 @Transactional
 public interface ImageRepository extends JpaRepository<Image, Long> {
-    public Image findImaeById(Long id);
+    public Image findImageById(Long id);
 }

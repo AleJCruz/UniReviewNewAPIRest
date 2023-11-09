@@ -21,14 +21,15 @@ public class ImageController {
     ImageService imageService;
 
     @PostMapping("/image/upload")
-    public <Mono>ResponseEntity<String> uploadImage(@RequestParam("file") MultipartFile file) {
+    public <Mono>ResponseEntity<ImageDTO> uploadImage(@RequestParam("file") MultipartFile file) {
         try {
             if (file != null) {
                 Image image = new Image();
                 image.setFilename(file.getOriginalFilename());
                 image.setImageData(file.getBytes());
-                imageService.uploadImage(image);
-                return new ResponseEntity<>("imagen guardada correctamente", HttpStatus.CREATED);
+                image =  imageService.uploadImage(image);
+                ImageDTO dto = convertToDTO(image);
+                return new ResponseEntity<>(dto, HttpStatus.CREATED);
             } else {
                 return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
             }

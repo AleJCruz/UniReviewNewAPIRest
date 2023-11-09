@@ -19,6 +19,7 @@ import org.springframework.util.StreamUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
+import javax.transaction.Transactional;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
@@ -31,16 +32,16 @@ public class TeacherController {
     Logger logger = LoggerFactory.getLogger(TeacherController.class);
     @Autowired
     private ImageService imageService;
-    @PostMapping("/teacher")
-    public <Mono>ResponseEntity<TeacherDTO> register(@RequestBody TeacherDTO teacherDTO){
+    @PostMapping("/teacher/{imageId}")
+    @Transactional
+    public <Mono>ResponseEntity<TeacherDTO> register(@RequestBody TeacherDTO teacherDTO, @PathVariable(value="imageId") Long imageId){
         Teacher teacher;
         TeacherDTO dto;
         try{
             teacher = convertToEntity(teacherDTO);
-            byte[] imageData = readImageDataFromClasspath("/images/teacher.png");
-            Image image = new Image(null, "imagen profesor", imageData);
-            image = imageService.uploadImage(image);
+            Image image = imageService.getImage(imageId);
             teacher.setImage(image);
+            System.out.println("Id de la iamgen:" + teacher.getImage().getId());
             teacher = teacherService.register(teacher);
             dto = convertToDTO(teacher);
         }
@@ -50,6 +51,25 @@ public class TeacherController {
         }
         return new ResponseEntity<TeacherDTO>(dto, HttpStatus.OK);
     }
+//    @PostMapping("/teacher")
+//    public <Mono>ResponseEntity<TeacherDTO> register(@RequestBody TeacherDTO teacherDTO){
+//        Teacher teacher;
+//        TeacherDTO dto;
+//        try{
+//            teacher = convertToEntity(teacherDTO);
+//            byte[] imageData = readImageDataFromClasspath("/images/teacher.png");
+//            Image image = new Image(null, "imagen profesor", imageData);
+//            image = imageService.uploadImage(image);
+//            teacher.setImage(image);
+//            teacher = teacherService.register(teacher);
+//            dto = convertToDTO(teacher);
+//        }
+//        catch (Exception e){
+//            logger.error(e.toString());
+//            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "No se ha podido registrar");
+//        }
+//        return new ResponseEntity<TeacherDTO>(dto, HttpStatus.OK);
+//    }
     @GetMapping("/teacher")
     public <Flux>ResponseEntity<List<TeacherDTO>> list(){
         List<Teacher> list;

@@ -33,4 +33,7 @@ public class ImageServiceImpl implements ImageService {
                 orElseThrow(()->new Exception("No se encontró la entidad"));
         return imageRepository.save(image);
     }
+    public Image getImage(Long id){
+        return imageRepository.findImageById(id);
+    }
 }
