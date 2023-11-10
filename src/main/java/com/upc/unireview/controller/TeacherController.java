@@ -15,6 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.util.StreamUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
@@ -70,6 +71,7 @@ public class TeacherController {
 //        }
 //        return new ResponseEntity<TeacherDTO>(dto, HttpStatus.OK);
 //    }
+    @PreAuthorize("hasAuthority('Administrador') or hasAuthority('Universitario')")
     @GetMapping("/teacher")
     public <Flux>ResponseEntity<List<TeacherDTO>> list(){
         List<Teacher> list;

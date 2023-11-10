@@ -100,7 +100,7 @@ public class UniversityServiceImpl implements UniversityService{
                 }
             }
         }
-        if((pensionFrom<pensionTo) && pensionFrom > 0){
+        if((pensionFrom<pensionTo) && pensionFrom >= 0){
             for (University university:listUniversities()
             ) {
                 if(university.getPension()<pensionFrom || university.getPension()>pensionTo){

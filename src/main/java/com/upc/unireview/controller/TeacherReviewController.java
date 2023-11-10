@@ -11,6 +11,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
@@ -40,6 +41,7 @@ public class TeacherReviewController {
         }
         return new ResponseEntity<TeacherReviewDTO>(dto, HttpStatus.OK);
     }
+    @PreAuthorize("hasAuthority('Administrador') or hasAuthority('Universitario')")
     @GetMapping("/teacherReviews")
     public <Flux>ResponseEntity<List<TeacherReviewDTO>> list(){
         List<TeacherReview> list;

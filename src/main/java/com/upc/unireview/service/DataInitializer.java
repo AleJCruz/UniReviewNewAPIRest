@@ -62,7 +62,7 @@ public class DataInitializer implements CommandLineRunner {
         if (universityRepository.findAll().isEmpty()){
             Image image = new Image(null, "university", readImageDataFromClasspath("/images/pucp.jpg"));
             imageRepository.save(image);
-            universityRepository.save(new com.upc.unireview.entities.University(null, "Pontificia Universidad Católica del Perú", "San Miguel", 1945,true,false,true,0,"https://www.upc.edu.pe/",image));
+            universityRepository.save(new com.upc.unireview.entities.University(null, "Pontificia Universidad Católica del Perú", "San Miguel", 1945,true,false,true,0,"https://www.pucp.edu.pe/admision/admision-pregrado/modalidades-de-admision/",image));
             Image image2 = new Image(null, "university", readImageDataFromClasspath("/images/upc-mo.jpg"));
             imageRepository.save(image2);
             universityRepository.save(new com.upc.unireview.entities.University(null, "Universidad Peruana de Ciencias Aplicadas", "San Borja", 2450,true,true,true,0,"https://www.upc.edu.pe/",image2));
@@ -75,6 +75,29 @@ public class DataInitializer implements CommandLineRunner {
             Image image5 = new Image(null, "university", readImageDataFromClasspath("/images/upc-sm.jpg"));
             imageRepository.save(image5);
             universityRepository.save(new com.upc.unireview.entities.University(null, "Universidad Peruana de Ciencias Aplicadas", "San Miguel", 2450,true,true,true,0,"https://www.upc.edu.pe/",image5));
+            Image image6 = new Image(null, "university", readImageDataFromClasspath("/images/UAP.jpg"));
+            imageRepository.save(image6);
+            universityRepository.save(new com.upc.unireview.entities.University(null, "Universidad Autonóma del Perú", "Villa El Salvador", 2450,true,true,true,0,"https://www.autonoma.pe/evaluacion-preferente/?utm_source=pg_goog%20lm_afin4&utm_medium=cpc&utm_campaign=search%20lm_afines4&gclid=EAIaIQobChMIlq6P7qO6ggMVG1hIAB1bpwh9EAAYAiAAEgJfSPD_BwE",image6));
+            Image image7 = new Image(null, "university", readImageDataFromClasspath("/images/UARM.jpg"));
+            imageRepository.save(image7);
+            universityRepository.save(new com.upc.unireview.entities.University(null, "Universidad Antonio Ruiz de Montoya", "Pueblo Libre", 2450,true,false,true,0,"https://www.educaedu.com.pe/centros/universidad-antonio-ruiz-de-montoya-uni1788",image7));
+            Image image8 = new Image(null, "university", readImageDataFromClasspath("/images/ucs.jpg"));
+            imageRepository.save(image8);
+            universityRepository.save(new com.upc.unireview.entities.University(null, "Universidad Cientifica del Sur", "Miraflores", 2450,true,false,true,0,"https://www.cientifica.edu.pe/admision/calendario-admision",image8));
+            Image image9 = new Image(null, "university", readImageDataFromClasspath("/images/uni.jpg"));
+            imageRepository.save(image9);
+            universityRepository.save(new com.upc.unireview.entities.University(null, "Universidad Nacional de Ingienería", "Independencia", 2450,true,false,true,0,"https://admision.uni.edu.pe/",image9));
+            Image image10 = new Image(null, "university", readImageDataFromClasspath("/images/unmsm.png"));
+            imageRepository.save(image10);
+            universityRepository.save(new com.upc.unireview.entities.University(null, "Universidad Nacional Mayor de San Marcos", "Lima", 2450,true,false,true,0,"https://www.unmsm.edu.pe/",image10));
+            Image image11 = new Image(null, "university", readImageDataFromClasspath("/images/up.jpg"));
+            imageRepository.save(image11);
+            universityRepository.save(new com.upc.unireview.entities.University(null, "Universidad del Pacifico", "Jesús María", 2450,true,false,true,0,"https://www.up.edu.pe/admision",image11));
+            Image image12 = new Image(null, "university", readImageDataFromClasspath("/images/upch.jpg"));
+            imageRepository.save(image12);
+            universityRepository.save(new com.upc.unireview.entities.University(null, "Universidad Ricardo Palma", "Jesús María", 2450,true,false,true,0,"https://www.urp.edu.pe/",image12));
+
+
         }
         if (teacherRepository.findAll().isEmpty()) {
             Image image = new Image(null, "teacher", readImageDataFromClasspath("/images/teacher2.jpg"));
@@ -85,6 +108,20 @@ public class DataInitializer implements CommandLineRunner {
             courseRepository.save(new Course(null, "Arquitectura Empresarial"));
             courseRepository.save(new Course(null, "Matemática"));
             courseRepository.save(new Course(null, "Programación Orientada a Objetos"));
+            courseRepository.save(new Course(null, "IHC"));
+            courseRepository.save(new Course(null, "Arquitectura de negocios"));
+            courseRepository.save(new Course(null, "Fundamentos de la programacion"));
+            courseRepository.save(new Course(null, "Taller de creatividad"));
+            courseRepository.save(new Course(null, "Psicologia"));
+            courseRepository.save(new Course(null, "Calculo I"));
+            courseRepository.save(new Course(null, "Calculo II"));
+            courseRepository.save(new Course(null, "Comprension y produccion de lenguaje I"));
+            courseRepository.save(new Course(null, "Comprension y produccion de lenguaje II"));
+            courseRepository.save(new Course(null, "Redes y comunicaciones de datos"));
+            courseRepository.save(new Course(null, "Estadistica Aplicada"));
+
+
+
             // Obtén el profesor dentro de una transacción
             Teacher e = teacherRepository.getTeacherById(1L);
 
