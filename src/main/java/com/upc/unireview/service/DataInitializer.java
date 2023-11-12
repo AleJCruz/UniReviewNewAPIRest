@@ -102,7 +102,7 @@ public class DataInitializer implements CommandLineRunner {
         if (teacherRepository.findAll().isEmpty()) {
             Image image = new Image(null, "teacher", readImageDataFromClasspath("/images/teacher2.jpg"));
             imageRepository.save(image);
-            teacherRepository.save(new com.upc.unireview.entities.Teacher(null, "Esther Aliaga Cerna", 0,"Profesora un poco bajita", new ArrayList<Course>(), new Rigurosity(5L,"Sin Definir"),image));
+            teacherRepository.save(new com.upc.unireview.entities.Teacher(null, "Esther Aliaga Cerna", 0,"Profesora que enseña generalmente en San Miguel", new ArrayList<Course>(), new Rigurosity(5L,"Sin Definir"),image));
         }
         if (courseRepository.findAll().isEmpty()) {
             courseRepository.save(new Course(null, "Arquitectura Empresarial"));
