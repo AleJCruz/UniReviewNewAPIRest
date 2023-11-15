@@ -44,10 +44,10 @@ public class UniversityServiceImpl implements UniversityService{
         return university;
     }
     public List<University> listUniversities(){
-        List<University> l1=new ArrayList<>();
-        for (University university:universityRepository.findAll()){
+        List<University> l1= universityRepository.findAll();
+        for (University university:l1) {
             setUniversityQualification(university);
-            l1.add(university);
+            universityRepository.save(university);
         }
         return l1;
     }
