@@ -1,0 +1,362 @@
+2023-11-15 13:49:33,635 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.5.Final
+2023-11-15 13:49:33,642 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting UniReviewApplication using Java 20.0.2 on DESKTOP-BURFA59 with PID 19720 (C:\Users\user\Desktop\Nuevo UniReview\UniReviewImages\UniReviewNewAPIRest\target\classes started by user in C:\Users\user\Desktop\Nuevo UniReview\UniReviewImages\UniReviewNewAPIRest)
+2023-11-15 13:49:33,642 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.15, Spring v5.3.29
+2023-11-15 13:49:33,642 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-11-15 13:49:33,683 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-11-15 13:49:33,683 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-11-15 13:49:34,665 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-15 13:49:34,839 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 167 ms. Found 9 JPA repository interfaces.
+2023-11-15 13:49:35,496 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2023-11-15 13:49:35,504 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2023-11-15 13:49:35,506 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2023-11-15 13:49:35,506 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.79]
+2023-11-15 13:49:35,602 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-11-15 13:49:35,602 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1918 ms
+2023-11-15 13:49:35,749 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-15 13:49:35,809 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-11-15 13:49:35,962 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-11-15 13:49:36,059 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2023-11-15 13:49:36,344 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2023-11-15 13:49:36,362 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-11-15 13:49:37,290 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-15 13:49:37,300 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-15 13:49:37,680 DEBUG org.springframework.web.filter.GenericFilterBean [restartedMain] Filter 'jwtRequestFilter' configured for use
+2023-11-15 13:49:37,847 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-15 13:49:38,293 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6c52e85e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@684fd030, org.springframework.security.web.context.SecurityContextPersistenceFilter@317ba112, org.springframework.security.web.header.HeaderWriterFilter@f7d9184, org.springframework.security.web.authentication.logout.LogoutFilter@566d1054, com.upc.unireview.security.JwtRequestFilter@12ab78e8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@10b3987, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5293e0a6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7e61a254, org.springframework.security.web.session.SessionManagementFilter@5b993929, org.springframework.security.web.access.ExceptionTranslationFilter@619d8613, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7f7f6cc8]
+2023-11-15 13:49:39,460 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2023-11-15 13:49:39,475 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2023-11-15 13:49:39,493 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-15 13:49:39,502 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started UniReviewApplication in 6.24 seconds (JVM running for 7.071)
+2023-11-15 14:58:18,163 INFO org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-11-15 14:58:18,231 INFO org.apache.juli.logging.DirectJDKLog [Thread-5] Pausing ProtocolHandler ["http-nio-8080"]
+2023-11-15 14:58:18,232 INFO org.apache.juli.logging.DirectJDKLog [Thread-5] Stopping service [Tomcat]
+2023-11-15 14:58:18,249 WARN org.apache.juli.logging.DirectJDKLog [Thread-5] The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1758)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1623)
+2023-11-15 14:58:18,252 INFO org.apache.juli.logging.DirectJDKLog [Thread-5] Stopping ProtocolHandler ["http-nio-8080"]
+2023-11-15 14:58:18,256 INFO org.apache.juli.logging.DirectJDKLog [Thread-5] Destroying ProtocolHandler ["http-nio-8080"]
+2023-11-15 14:58:18,317 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Thread-5] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-15 14:58:18,337 INFO com.zaxxer.hikari.HikariDataSource [Thread-5] HikariPool-1 - Shutdown initiated...
+2023-11-15 14:58:18,342 INFO com.zaxxer.hikari.HikariDataSource [Thread-5] HikariPool-1 - Shutdown completed.
+2023-11-15 14:58:18,571 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting UniReviewApplication using Java 20.0.2 on DESKTOP-BURFA59 with PID 19720 (C:\Users\user\Desktop\Nuevo UniReview\UniReviewImages\UniReviewNewAPIRest\target\classes started by user in C:\Users\user\Desktop\Nuevo UniReview\UniReviewImages\UniReviewNewAPIRest)
+2023-11-15 14:58:18,571 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.15, Spring v5.3.29
+2023-11-15 14:58:18,571 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-11-15 14:58:19,244 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-15 14:58:19,302 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 57 ms. Found 9 JPA repository interfaces.
+2023-11-15 14:58:19,521 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2023-11-15 14:58:19,523 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2023-11-15 14:58:19,523 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2023-11-15 14:58:19,524 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.79]
+2023-11-15 14:58:19,576 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-11-15 14:58:19,576 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1001 ms
+2023-11-15 14:58:19,687 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-15 14:58:19,701 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-2 - Starting...
+2023-11-15 14:58:19,765 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-2 - Start completed.
+2023-11-15 14:58:19,766 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-11-15 14:58:20,138 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-15 14:58:20,139 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-15 14:58:20,250 DEBUG org.springframework.web.filter.GenericFilterBean [restartedMain] Filter 'jwtRequestFilter' configured for use
+2023-11-15 14:58:20,375 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-15 14:58:20,704 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@78df9fec, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1a578db6, org.springframework.security.web.context.SecurityContextPersistenceFilter@967c170, org.springframework.security.web.header.HeaderWriterFilter@8054ad4, org.springframework.security.web.authentication.logout.LogoutFilter@ff8201c, com.upc.unireview.security.JwtRequestFilter@2f378669, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@19f46c21, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3b05d621, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@66bc6da2, org.springframework.security.web.session.SessionManagementFilter@4bae53c9, org.springframework.security.web.access.ExceptionTranslationFilter@7d7dafc2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@21305ace]
+2023-11-15 14:58:21,128 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2023-11-15 14:58:21,140 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2023-11-15 14:58:21,143 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-15 14:58:21,150 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started UniReviewApplication in 2.644 seconds (JVM running for 4128.719)
+2023-11-15 14:58:21,178 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2023-11-15 15:03:32,159 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.5.Final
+2023-11-15 15:03:32,162 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting UniReviewApplication using Java 20.0.2 on DESKTOP-BURFA59 with PID 3228 (C:\Users\user\Desktop\Nuevo UniReview\UniReviewImages\UniReviewNewAPIRest\target\classes started by user in C:\Users\user\Desktop\Nuevo UniReview\UniReviewImages\UniReviewNewAPIRest)
+2023-11-15 15:03:32,162 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.15, Spring v5.3.29
+2023-11-15 15:03:32,163 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-11-15 15:03:32,198 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-11-15 15:03:32,198 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-11-15 15:03:32,850 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-15 15:03:33,012 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 154 ms. Found 9 JPA repository interfaces.
+2023-11-15 15:03:33,565 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2023-11-15 15:03:33,573 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2023-11-15 15:03:33,574 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2023-11-15 15:03:33,575 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.79]
+2023-11-15 15:03:33,662 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-11-15 15:03:33,662 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1464 ms
+2023-11-15 15:03:33,810 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-15 15:03:33,869 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-11-15 15:03:34,023 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-11-15 15:03:34,117 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2023-11-15 15:03:34,257 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2023-11-15 15:03:34,274 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-11-15 15:03:35,068 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-15 15:03:35,082 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-15 15:03:35,449 DEBUG org.springframework.web.filter.GenericFilterBean [restartedMain] Filter 'jwtRequestFilter' configured for use
+2023-11-15 15:03:35,608 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-15 15:03:36,006 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@62186f46, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@70caf745, org.springframework.security.web.context.SecurityContextPersistenceFilter@6c92668, org.springframework.security.web.header.HeaderWriterFilter@761d48ed, org.springframework.security.web.authentication.logout.LogoutFilter@46d57849, com.upc.unireview.security.JwtRequestFilter@35fcc560, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@e89aace, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6a957955, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@b5cdf61, org.springframework.security.web.session.SessionManagementFilter@6ec5bc06, org.springframework.security.web.access.ExceptionTranslationFilter@2781ecf0, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1560f414]
+2023-11-15 15:03:36,597 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2023-11-15 15:03:36,613 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2023-11-15 15:03:36,630 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-15 15:03:36,639 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started UniReviewApplication in 4.837 seconds (JVM running for 5.583)
+2023-11-15 15:07:59,090 INFO org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 84 class path changes (0 additions, 84 deletions, 0 modifications)
+2023-11-15 15:07:59,099 INFO org.apache.juli.logging.DirectJDKLog [Thread-5] Pausing ProtocolHandler ["http-nio-8080"]
+2023-11-15 15:07:59,099 INFO org.apache.juli.logging.DirectJDKLog [Thread-5] Stopping service [Tomcat]
+2023-11-15 15:07:59,102 WARN org.apache.juli.logging.DirectJDKLog [Thread-5] The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1758)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1623)
+2023-11-15 15:07:59,103 INFO org.apache.juli.logging.DirectJDKLog [Thread-5] Stopping ProtocolHandler ["http-nio-8080"]
+2023-11-15 15:07:59,105 INFO org.apache.juli.logging.DirectJDKLog [Thread-5] Destroying ProtocolHandler ["http-nio-8080"]
+2023-11-15 15:07:59,123 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Thread-5] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-15 15:07:59,125 INFO com.zaxxer.hikari.HikariDataSource [Thread-5] HikariPool-1 - Shutdown initiated...
+2023-11-15 15:07:59,128 INFO com.zaxxer.hikari.HikariDataSource [Thread-5] HikariPool-1 - Shutdown completed.
+2023-11-15 15:08:17,284 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting UniReviewApplication using Java 20.0.2 on DESKTOP-BURFA59 with PID 3228 (C:\Users\user\Desktop\Nuevo UniReview\UniReviewImages\UniReviewNewAPIRest\target\classes started by user in C:\Users\user\Desktop\Nuevo UniReview\UniReviewImages\UniReviewNewAPIRest)
+2023-11-15 15:08:17,285 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.15, Spring v5.3.29
+2023-11-15 15:08:17,285 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-11-15 15:08:17,469 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-15 15:08:17,470 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2023-11-15 15:08:17,555 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2023-11-15 15:08:17,556 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2023-11-15 15:08:17,556 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.79]
+2023-11-15 15:08:17,584 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-11-15 15:08:17,584 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 298 ms
+2023-11-15 15:08:17,612 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-15 15:08:17,618 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-2 - Starting...
+2023-11-15 15:08:17,664 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-2 - Start completed.
+2023-11-15 15:08:17,664 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-11-15 15:08:17,693 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-15 15:08:17,693 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-15 15:08:17,739 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-15 15:08:18,080 WARN org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration [restartedMain] 
+
+Using generated security password: 2b71fe56-87ee-4ecd-942b-98835f2af596
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-11-15 15:08:18,102 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7b9576f4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@45793d16, org.springframework.security.web.context.SecurityContextPersistenceFilter@7aeab081, org.springframework.security.web.header.HeaderWriterFilter@6d0d2c20, org.springframework.security.web.csrf.CsrfFilter@6495db2e, org.springframework.security.web.authentication.logout.LogoutFilter@270b7195, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@22fbb3e7, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@6fe38c20, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@2722a32a, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2bfca5ee, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@39bdb1b1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3d55e68a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@69bfa1f5, org.springframework.security.web.session.SessionManagementFilter@306c4109, org.springframework.security.web.access.ExceptionTranslationFilter@5a8322f7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4333aca1]
+2023-11-15 15:08:18,116 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2023-11-15 15:08:18,133 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-15 15:08:18,141 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started UniReviewApplication in 0.883 seconds (JVM running for 287.084)
+2023-11-15 15:08:18,147 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+   SpringBootWebSecurityConfiguration.SecurityFilterChainConfiguration matched:
+      - AllNestedConditions 2 matched 0 did not; NestedCondition on DefaultWebSecurityCondition.Beans @ConditionalOnMissingBean (types: org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter,org.springframework.security.web.SecurityFilterChain; SearchStrategy: all) did not find any beans; NestedCondition on DefaultWebSecurityCondition.Classes @ConditionalOnClass found required classes 'org.springframework.security.web.SecurityFilterChain', 'org.springframework.security.config.annotation.web.builders.HttpSecurity' (DefaultWebSecurityCondition)
+
+   SpringBootWebSecurityConfiguration.WebSecurityEnablerConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.security.config.annotation.web.configuration.EnableWebSecurity' (OnClassCondition)
+      - @ConditionalOnMissingBean (names: springSecurityFilterChain; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   UserDetailsServiceAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.security.authentication.AuthenticationManager' (OnClassCondition)
+      - @ConditionalOnBean (types: org.springframework.security.config.annotation.ObjectPostProcessor; SearchStrategy: all) found bean 'objectPostProcessor'; @ConditionalOnMissingBean (types: org.springframework.security.authentication.AuthenticationManager,org.springframework.security.authentication.AuthenticationProvider,org.springframework.security.core.userdetails.UserDetailsService,org.springframework.security.authentication.AuthenticationManagerResolver,org.springframework.security.oauth2.jwt.JwtDecoder,org.springframework.security.oauth2.server.resource.introspection.OpaqueTokenIntrospector,org.springframework.security.oauth2.client.registration.ClientRegistrationRepository,org.springframework.security.saml2.provider.service.registration.RelyingPartyRegistrationRepository; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+
+Negative matches:
+-----------------
+
+    None
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2023-11-15 15:08:21,024 INFO org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 63 class path changes (63 additions, 0 deletions, 0 modifications)
+2023-11-15 15:08:21,029 INFO org.apache.juli.logging.DirectJDKLog [Thread-7] Stopping service [Tomcat]
+2023-11-15 15:08:21,033 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Thread-7] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-15 15:08:21,033 INFO com.zaxxer.hikari.HikariDataSource [Thread-7] HikariPool-2 - Shutdown initiated...
+2023-11-15 15:08:21,035 INFO com.zaxxer.hikari.HikariDataSource [Thread-7] HikariPool-2 - Shutdown completed.
+2023-11-15 15:08:21,104 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting UniReviewApplication using Java 20.0.2 on DESKTOP-BURFA59 with PID 3228 (C:\Users\user\Desktop\Nuevo UniReview\UniReviewImages\UniReviewNewAPIRest\target\classes started by user in C:\Users\user\Desktop\Nuevo UniReview\UniReviewImages\UniReviewNewAPIRest)
+2023-11-15 15:08:21,105 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.15, Spring v5.3.29
+2023-11-15 15:08:21,105 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-11-15 15:08:21,434 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-15 15:08:21,470 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 35 ms. Found 9 JPA repository interfaces.
+2023-11-15 15:08:21,557 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2023-11-15 15:08:21,558 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2023-11-15 15:08:21,558 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.79]
+2023-11-15 15:08:21,584 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-11-15 15:08:21,584 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 477 ms
+2023-11-15 15:08:21,621 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-15 15:08:21,627 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-3 - Starting...
+2023-11-15 15:08:21,665 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-3 - Start completed.
+2023-11-15 15:08:21,666 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-11-15 15:08:21,918 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-15 15:08:21,919 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-15 15:08:21,998 DEBUG org.springframework.web.filter.GenericFilterBean [restartedMain] Filter 'jwtRequestFilter' configured for use
+2023-11-15 15:08:22,069 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-15 15:08:22,308 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@68acf9a9, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@fc8a53a, org.springframework.security.web.context.SecurityContextPersistenceFilter@1389c972, org.springframework.security.web.header.HeaderWriterFilter@da21cd, org.springframework.security.web.authentication.logout.LogoutFilter@3482b7a6, com.upc.unireview.security.JwtRequestFilter@233db744, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@971f670, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@58747ada, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@195fa3d, org.springframework.security.web.session.SessionManagementFilter@4d1f98e2, org.springframework.security.web.access.ExceptionTranslationFilter@639f2fbc, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5b0a84ef]
+2023-11-15 15:08:22,601 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2023-11-15 15:08:22,612 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-15 15:08:22,615 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started UniReviewApplication in 1.54 seconds (JVM running for 291.559)
+2023-11-15 15:08:22,638 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+    None
+
+
+Negative matches:
+-----------------
+
+   SpringBootWebSecurityConfiguration.SecurityFilterChainConfiguration:
+      Did not match:
+         - AllNestedConditions 1 matched 1 did not; NestedCondition on DefaultWebSecurityCondition.Beans @ConditionalOnMissingBean (types: org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter,org.springframework.security.web.SecurityFilterChain; SearchStrategy: all) found beans of type 'org.springframework.security.web.SecurityFilterChain' filterChain; NestedCondition on DefaultWebSecurityCondition.Classes @ConditionalOnClass found required classes 'org.springframework.security.web.SecurityFilterChain', 'org.springframework.security.config.annotation.web.builders.HttpSecurity' (DefaultWebSecurityCondition)
+
+   SpringBootWebSecurityConfiguration.WebSecurityEnablerConfiguration:
+      Did not match:
+         - @ConditionalOnMissingBean (names: springSecurityFilterChain; SearchStrategy: all) found beans named springSecurityFilterChain (OnBeanCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.security.config.annotation.web.configuration.EnableWebSecurity' (OnClassCondition)
+
+   UserDetailsServiceAutoConfiguration:
+      Did not match:
+         - @ConditionalOnMissingBean (types: org.springframework.security.authentication.AuthenticationManager,org.springframework.security.authentication.AuthenticationProvider,org.springframework.security.core.userdetails.UserDetailsService,org.springframework.security.authentication.AuthenticationManagerResolver,org.springframework.security.oauth2.jwt.JwtDecoder,org.springframework.security.oauth2.server.resource.introspection.OpaqueTokenIntrospector,org.springframework.security.oauth2.client.registration.ClientRegistrationRepository,org.springframework.security.saml2.provider.service.registration.RelyingPartyRegistrationRepository; SearchStrategy: all) found beans of type 'org.springframework.security.authentication.AuthenticationManager' authenticationManager and found beans of type 'org.springframework.security.core.userdetails.UserDetailsService' jwtUserDetailsService (OnBeanCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.security.authentication.AuthenticationManager' (OnClassCondition)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2023-11-15 15:08:24,584 INFO org.springframework.boot.StartupInfoLogger [main] Starting UniReviewApplicationTests using Java 20.0.2 on DESKTOP-BURFA59 with PID 27144 (started by user in C:\Users\user\Desktop\Nuevo UniReview\UniReviewImages\UniReviewNewAPIRest)
+2023-11-15 15:08:24,585 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.7.15, Spring v5.3.29
+2023-11-15 15:08:24,586 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-11-15 15:08:24,591 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.5.Final
+2023-11-15 15:08:25,342 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-15 15:08:25,529 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 179 ms. Found 9 JPA repository interfaces.
+2023-11-15 15:08:26,146 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-15 15:08:26,206 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-11-15 15:08:26,367 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-11-15 15:08:26,526 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-11-15 15:08:26,687 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-11-15 15:08:26,706 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-11-15 15:08:27,615 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-15 15:08:27,624 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-15 15:08:28,329 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-15 15:08:29,099 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@363d29dd, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@19b4dd60, org.springframework.security.web.context.SecurityContextPersistenceFilter@4767be27, org.springframework.security.web.header.HeaderWriterFilter@23169374, org.springframework.security.web.authentication.logout.LogoutFilter@1ece052b, com.upc.unireview.security.JwtRequestFilter@478cc5f1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@493489dd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3358805a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@40f77135, org.springframework.security.web.session.SessionManagementFilter@53202b06, org.springframework.security.web.access.ExceptionTranslationFilter@6939f18a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2b370ca9]
+2023-11-15 15:08:30,353 INFO org.springframework.boot.StartupInfoLogger [main] Started UniReviewApplicationTests in 6.074 seconds (JVM running for 6.869)
+2023-11-15 15:08:30,706 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-15 15:08:30,707 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-11-15 15:08:30,711 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-11-15 16:46:05,525 INFO org.springframework.boot.StartupInfoLogger [main] Starting UniReviewApplicationTests using Java 20.0.2 on DESKTOP-BURFA59 with PID 18604 (started by user in C:\Users\user\Desktop\Nuevo UniReview\UniReviewImages\UniReviewNewAPIRest)
+2023-11-15 16:46:05,527 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.7.15, Spring v5.3.29
+2023-11-15 16:46:05,528 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-11-15 16:46:05,539 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.5.Final
+2023-11-15 16:46:06,755 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-15 16:46:06,960 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 195 ms. Found 9 JPA repository interfaces.
+2023-11-15 16:46:07,674 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-15 16:46:07,750 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-11-15 16:46:07,946 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-11-15 16:46:08,115 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-11-15 16:46:10,023 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-11-15 16:46:10,044 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-11-15 16:46:16,972 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-15 16:46:16,984 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-15 16:46:17,717 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-15 16:46:18,446 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@44ba9f25, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@53570fff, org.springframework.security.web.context.SecurityContextPersistenceFilter@4fce655d, org.springframework.security.web.header.HeaderWriterFilter@4246f904, org.springframework.security.web.authentication.logout.LogoutFilter@4fe9fb65, com.upc.unireview.security.JwtRequestFilter@fa689db, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1aba8978, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2662e3ff, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6e5df971, org.springframework.security.web.session.SessionManagementFilter@69efdfd9, org.springframework.security.web.access.ExceptionTranslationFilter@9fd5dd0, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@23169374]
+2023-11-15 16:46:19,843 INFO org.springframework.boot.StartupInfoLogger [main] Started UniReviewApplicationTests in 14.899 seconds (JVM running for 16.198)
+2023-11-15 16:46:35,882 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-15 16:46:35,884 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-11-15 16:46:35,891 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-11-15 16:48:17,225 INFO org.springframework.boot.StartupInfoLogger [main] Starting UniReviewApplicationTests using Java 20.0.2 on DESKTOP-BURFA59 with PID 20104 (started by user in C:\Users\user\Desktop\Nuevo UniReview\UniReviewImages\UniReviewNewAPIRest)
+2023-11-15 16:48:17,227 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.7.15, Spring v5.3.29
+2023-11-15 16:48:17,227 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-11-15 16:48:17,234 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.5.Final
+2023-11-15 16:48:18,111 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-15 16:48:18,277 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 159 ms. Found 9 JPA repository interfaces.
+2023-11-15 16:48:18,892 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-15 16:48:18,949 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-11-15 16:48:19,115 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-11-15 16:48:19,257 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-11-15 16:48:20,863 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-11-15 16:48:20,880 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-11-15 16:48:28,428 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-15 16:48:28,438 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-15 16:48:29,075 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-15 16:48:29,685 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1f2d0ca2, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@e353e1d, org.springframework.security.web.context.SecurityContextPersistenceFilter@1e1d813a, org.springframework.security.web.header.HeaderWriterFilter@756030e2, org.springframework.security.web.authentication.logout.LogoutFilter@44ba9f25, com.upc.unireview.security.JwtRequestFilter@4e35a219, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3891db3a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6fc3f1a7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1a1c308b, org.springframework.security.web.session.SessionManagementFilter@491f3fb0, org.springframework.security.web.access.ExceptionTranslationFilter@6fb51e17, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@796a7c9]
+2023-11-15 16:48:30,887 INFO org.springframework.boot.StartupInfoLogger [main] Started UniReviewApplicationTests in 13.979 seconds (JVM running for 14.848)
+2023-11-15 16:48:32,418 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-15 16:48:32,419 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-11-15 16:48:32,421 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-11-15 16:52:31,088 INFO org.springframework.boot.StartupInfoLogger [main] Starting UniReviewApplicationTests using Java 20.0.2 on DESKTOP-BURFA59 with PID 26016 (started by user in C:\Users\user\Desktop\Nuevo UniReview\UniReviewImages\UniReviewNewAPIRest)
+2023-11-15 16:52:31,090 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.7.15, Spring v5.3.29
+2023-11-15 16:52:31,091 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-11-15 16:52:31,100 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.5.Final
+2023-11-15 16:52:32,080 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-15 16:52:32,280 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 191 ms. Found 9 JPA repository interfaces.
+2023-11-15 16:52:32,940 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-15 16:52:33,009 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-11-15 16:52:33,201 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-11-15 16:52:33,384 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-11-15 16:52:35,025 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-11-15 16:52:35,046 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-11-15 16:52:42,618 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-15 16:52:42,628 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-15 16:52:43,412 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-15 16:52:44,126 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4fb42efa, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@35599228, org.springframework.security.web.context.SecurityContextPersistenceFilter@44c54463, org.springframework.security.web.header.HeaderWriterFilter@1964ef9, org.springframework.security.web.authentication.logout.LogoutFilter@6e5df971, com.upc.unireview.security.JwtRequestFilter@a08e41b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7151dd9d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1f596988, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@51ac72f7, org.springframework.security.web.session.SessionManagementFilter@4a778943, org.springframework.security.web.access.ExceptionTranslationFilter@3d0ce151, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@267309f7]
+2023-11-15 16:52:45,719 INFO org.springframework.boot.StartupInfoLogger [main] Started UniReviewApplicationTests in 15.071 seconds (JVM running for 16.005)
+2023-11-15 16:52:47,144 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-15 16:52:47,145 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-11-15 16:52:47,148 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-11-15 19:27:24,108 INFO org.springframework.boot.StartupInfoLogger [main] Starting UniReviewApplicationTests using Java 20.0.2 on DESKTOP-BURFA59 with PID 22060 (started by user in C:\Users\user\Desktop\Nuevo UniReview\UniReviewImages\UniReviewNewAPIRest)
+2023-11-15 19:27:24,110 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.7.15, Spring v5.3.29
+2023-11-15 19:27:24,111 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-11-15 19:27:24,120 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.5.Final
+2023-11-15 19:27:25,239 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-15 19:27:25,446 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 184 ms. Found 9 JPA repository interfaces.
+2023-11-15 19:27:26,051 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-15 19:27:26,123 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-11-15 19:27:26,312 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-11-15 19:27:26,476 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-11-15 19:27:27,839 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-11-15 19:27:27,859 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-11-15 19:27:33,147 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-15 19:27:33,157 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-15 19:27:33,802 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-15 19:27:34,417 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2709e075, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3328db4f, org.springframework.security.web.context.SecurityContextPersistenceFilter@790ea58f, org.springframework.security.web.header.HeaderWriterFilter@15d68a50, org.springframework.security.web.authentication.logout.LogoutFilter@24d7c365, com.upc.unireview.security.JwtRequestFilter@4d1b4fa1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5b01b3f8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@27c49f54, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4f9e9c21, org.springframework.security.web.session.SessionManagementFilter@23b3afb4, org.springframework.security.web.access.ExceptionTranslationFilter@7c928399, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2eb0932c]
+2023-11-15 19:27:35,592 INFO org.springframework.boot.StartupInfoLogger [main] Started UniReviewApplicationTests in 11.843 seconds (JVM running for 12.712)
+2023-11-15 19:27:45,191 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-15 19:27:45,193 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-11-15 19:27:45,195 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
