@@ -1,2 +1,2 @@
 # UniReviewNewAPIRest
- Nueva API
+Proyecto academico UniReview
